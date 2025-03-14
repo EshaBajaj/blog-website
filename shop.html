@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<style>
+.work{
+    color: #478e84;
+    font-family: 'Cormorant Garamond';
+
+}
+.work:hover{
+    color: darkgoldenrod;
+}
+.work-in-progress {
+    text-align: center;
+    position: relative;
+}
+
+.wip-img {
+    width: 300px; 
+    display: block;
+    margin: auto;
+}
+
+
+.clock {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #5BA79C;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hand {
+    position: absolute;
+    width: 2px;
+    height: 30%;
+    background: #5BA79C;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+}
+
+.hour-hand {
+    animation: rotate-hour 12s infinite linear;
+    height: 25%;
+}
+
+.minute-hand {
+    animation: rotate-minute 60s infinite linear;
+    height: 35%;
+}
+
+@keyframes rotate-hour {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes rotate-minute {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+</style>
+<body style="background-color: rgba(238, 238, 65, 0.749)">
+    <section id="shop" class="container-fluid">
+        <div class="work-in-progress">
+            <img src="/public/work.png" alt="Work in Progress" class="wip-img">
+            <div class="clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand minute-hand"></div>
+                </div>
+                <div class="work"><h2>Work In Progress</h2></div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
